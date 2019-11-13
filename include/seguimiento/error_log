@@ -1,0 +1,1 @@
+[06-Jun-2019 18:53:28 America/Chicago] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home2/davisco/prueba.davisco.com.pe/class/seguimiento/CrearSCotizacion.php on line 5
