@@ -3,9 +3,9 @@
 if(!isset($_SESSION["FLD_COD"])) header("Location: back/login.php");
     require ('back/conexion.php');
     $query_tp = "SELECT * FROM tbl_tipo";
-    $p_tipo = $conn->query($personal);
+    $p_tipo = $conn->query($query_tp);
     $query_turnos= "SELECT * FROM tbl_turnos";
-    $turnos = $conn->query($turnos);
+    $turnos = $conn->query($query_turnos);
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,7 +58,7 @@ if(!isset($_SESSION["FLD_COD"])) header("Location: back/login.php");
         <select name="fld_tipo">
             <option value="0">tipo de cliente</option>
             <?php WHILE($row = $p_tipo->fetch_assoc()){?>
-		    <option value="<?php echo $row['fld_id'];?>"><?php echo $row['fld_nom'];?>
+		    <option value="<?php echo $row['FLD_ID'];?>"><?php echo $row['FLD_NOM'];?>
             </option>
             <?php }?>
         </select>
@@ -66,6 +66,8 @@ if(!isset($_SESSION["FLD_COD"])) header("Location: back/login.php");
     <input type="submit" name="submit" value="Registrar">
     </form>
     </div>
+ 
+ 
     <div class="SecDatos">
 	    <div class="panel-body">
             <table class="table table-bordered">

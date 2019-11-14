@@ -14,9 +14,9 @@
 			<span style="float:right" class="item" id="nombre_usuario"><a href="logout.php">Cerrar sesion</a></span>
 			<span class="item" style="float:right"><?php echo $_SESSION["user_name"]; ?></span>
 			<ul>
-                <li><a href="cotizaciones.php">Cotizaciones</a></li>
-                <li><a href="incidencias.php">Incidencias</a></li>
-                <li><a href="clientes.php">clientes</a></li>
+                <li><a href="personal.php">personal</a></li>
+                <li><a href="alumnos.php">alumnos</a></li>
+                <li><a href="silabus.php">silabus</a></li>
                 <li><a href="getdatos2.php">reporte</a></li>
 			</ul>
 </div>

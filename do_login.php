@@ -1,6 +1,6 @@
 <?php
 	
-	require ('conexion.php');
+	require ('back/conexion.php');
 
 	if(!empty($_POST)){
 		$usuario = $_POST["usuario"];
@@ -11,9 +11,9 @@
 			while($row = mysqli_fetch_array($rs)){
 				//echo "Bienvenido ".$row['user_name'];
 				@session_start();
-				$_SESSION["FLD_COD"]=$row["FLD_COD"];
-				$_SESSION["FLD_ID"]=$row["FLD_ID"];
-				$_SESSION["FLD_COD_TIPO"]=$row["FLD_COD_TIPO"];
+				$_SESSION["user_name"]=$row["FLD_COD"];
+				$_SESSION["user_cod"]=$row["FLD_ID"];
+				$_SESSION["user_type"]=$row["FLD_COD_TIPO"];
 				header("Location: index.php");
 			}
 
