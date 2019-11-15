@@ -55,3 +55,20 @@ II.DOCENTE
 	BUSCAR SIALBUS
 	SILABUS DEL DOCENTE
 	
+
+
+lnv_accesos
+lnv_carreras
+lnv_ciclos
+lnv_cursos
+	curso_id
+	curso_nombre
+	curso_descripcion
+	curso_
+lnv_silabus
+lnv_personal
+lnv_alumnos
+lnv_turno_a
+lnv_turno_p
+lnv_turno_s
+
