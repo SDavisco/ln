@@ -1,0 +1,40 @@
+SILABUS
+id_silabus
+id_carrera
+unidad didactica
+semestre lectivo
+semestre academico
+turno
+docente
+
+Carrera
+id_carrera
+nombre_carrera
+
+Unidad didactica
+id_unidad
+nombre_unidad
+
+semestre lectivo
+id_sem_lec
+año
+periodo(I-II)
+
+semestre academico
+id_sem_ac
+semestre(I-II-III-IV-V-VI)
+
+turno
+id_turno
+turno(diurno-nocturno-ambos)
+
+doscente
+id_doscente
+doscente
+
+doscente_unidad
+unidad
+doscente
+semestre_lectivo
+semestre_academico
+turno
