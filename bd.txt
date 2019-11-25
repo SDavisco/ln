@@ -1,4 +1,4 @@
-SILABUS
+﻿SILABUS
 id_silabus
 id_carrera
 unidad didactica
@@ -32,7 +32,8 @@ doscente
 id_doscente
 doscente
 
-doscente_unidad
+unidad_doscente
+id_unidad
 unidad
 doscente
 semestre_lectivo
