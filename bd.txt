@@ -1,11 +1,12 @@
 ﻿SILABUS
 id_silabus
 id_carrera
-unidad didactica
+unidad_didactica
 semestre lectivo
 semestre academico
 turno
 docente
+silabus_pdf
 
 Carrera
 id_carrera
