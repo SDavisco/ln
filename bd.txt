@@ -32,10 +32,10 @@ doscente
 id_doscente
 doscente
 
-unidad_doscente
+unidad_docente
 id_unidad
 unidad
-doscente
+docente
 semestre_lectivo
 semestre_academico
 turno
