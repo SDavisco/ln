@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2019 a las 00:56:49
+-- Tiempo de generación: 07-12-2019 a las 00:56:22
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `silabus`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `aaceso`
+--
+
+CREATE TABLE `aaceso` (
+  `user_cod` varchar(6) NOT NULL,
+  `user_type` int(1) NOT NULL,
+  `user_name` varchar(50) NOT NULL,
+  `user_pass` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -55,6 +68,18 @@ CREATE TABLE `semestre_academico` (
   `semestre` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `semestre_academico`
+--
+
+INSERT INTO `semestre_academico` (`id_sem_ac`, `semestre`) VALUES
+(0, 'I'),
+(0, 'II'),
+(0, 'III'),
+(0, 'IV'),
+(0, 'V'),
+(0, 'VI');
+
 -- --------------------------------------------------------
 
 --
@@ -63,8 +88,7 @@ CREATE TABLE `semestre_academico` (
 
 CREATE TABLE `semestre_lectivo` (
   `id_sem_lec` int(10) NOT NULL,
-  `año` int(4) NOT NULL,
-  `periodo` varchar(3) NOT NULL
+  `sem_lectivo` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
