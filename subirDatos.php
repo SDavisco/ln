@@ -5,7 +5,8 @@ require ('conexion.php');
     $u_didactica = "SELECT nomb_unidad FROM unidad_didactica";
     $list_ud = $conn->query($u_didactica);
 ?>
-<form name="unidades_d">
+<!DOCTYPE html>
+<form name="unidades_d" action="subird.php" method="POST" id="formulario">
 <label>
     unidad didactica
 </label>
