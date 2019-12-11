@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-12-2019 a las 00:56:22
--- Versión del servidor: 10.4.8-MariaDB
--- Versión de PHP: 7.3.11
+-- Tiempo de generación: 11-12-2019 a las 09:12:59
+-- Versión del servidor: 10.4.6-MariaDB
+-- Versión de PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,15 +25,22 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `aaceso`
+-- Estructura de tabla para la tabla `acceso`
 --
 
-CREATE TABLE `aaceso` (
+CREATE TABLE `acceso` (
   `user_cod` varchar(6) NOT NULL,
   `user_type` int(1) NOT NULL,
   `user_name` varchar(50) NOT NULL,
   `user_pass` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `acceso`
+--
+
+INSERT INTO `acceso` (`user_cod`, `user_type`, `user_name`, `user_pass`) VALUES
+('admin', 1, 'Administrador', 'pass123');
 
 -- --------------------------------------------------------
 
@@ -57,6 +64,17 @@ CREATE TABLE `docente` (
   `docente` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `docente`
+--
+
+INSERT INTO `docente` (`id_docente`, `docente`) VALUES
+(1, 'DUNCAN'),
+(2, 'NINAJA'),
+(3, 'TAPIA'),
+(4, 'MARIO'),
+(5, 'MANCO');
+
 -- --------------------------------------------------------
 
 --
@@ -73,12 +91,12 @@ CREATE TABLE `semestre_academico` (
 --
 
 INSERT INTO `semestre_academico` (`id_sem_ac`, `semestre`) VALUES
-(0, 'I'),
-(0, 'II'),
-(0, 'III'),
-(0, 'IV'),
-(0, 'V'),
-(0, 'VI');
+(1, 'I'),
+(2, 'II'),
+(3, 'III'),
+(4, 'IV'),
+(5, 'V'),
+(6, 'VI');
 
 -- --------------------------------------------------------
 
@@ -88,7 +106,7 @@ INSERT INTO `semestre_academico` (`id_sem_ac`, `semestre`) VALUES
 
 CREATE TABLE `semestre_lectivo` (
   `id_sem_lec` int(10) NOT NULL,
-  `sem_lectivo` int(4) NOT NULL
+  `sem_lectivo` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -118,16 +136,36 @@ CREATE TABLE `turno` (
   `turno` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `turno`
+--
+
+INSERT INTO `turno` (`id_turno`, `turno`) VALUES
+(1, 'diurno'),
+(2, 'nocturno'),
+(3, 'd/n');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `unidad_didáctica`
+-- Estructura de tabla para la tabla `unidad_d`
 --
 
-CREATE TABLE `unidad_didáctica` (
+CREATE TABLE `unidad_d` (
   `id_unidad` int(10) NOT NULL,
   `nomb_unidad` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `unidad_d`
+--
+
+INSERT INTO `unidad_d` (`id_unidad`, `nomb_unidad`) VALUES
+(1, 'REDES I'),
+(2, 'MANTENIMIENTO'),
+(3, 'DESARROLLO DE SOFTWARE'),
+(4, 'TALLER DE BASE DE DATOS'),
+(5, 'E-COMMERCE');
 
 -- --------------------------------------------------------
 
@@ -161,6 +199,12 @@ ALTER TABLE `docente`
   ADD PRIMARY KEY (`id_docente`);
 
 --
+-- Indices de la tabla `semestre_academico`
+--
+ALTER TABLE `semestre_academico`
+  ADD PRIMARY KEY (`id_sem_ac`);
+
+--
 -- Indices de la tabla `semestre_lectivo`
 --
 ALTER TABLE `semestre_lectivo`
@@ -179,9 +223,9 @@ ALTER TABLE `turno`
   ADD PRIMARY KEY (`id_turno`);
 
 --
--- Indices de la tabla `unidad_didáctica`
+-- Indices de la tabla `unidad_d`
 --
-ALTER TABLE `unidad_didáctica`
+ALTER TABLE `unidad_d`
   ADD PRIMARY KEY (`id_unidad`);
 
 --
@@ -198,7 +242,13 @@ ALTER TABLE `carrera`
 -- AUTO_INCREMENT de la tabla `docente`
 --
 ALTER TABLE `docente`
-  MODIFY `id_docente` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_docente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `semestre_academico`
+--
+ALTER TABLE `semestre_academico`
+  MODIFY `id_sem_ac` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `semestre_lectivo`
@@ -216,13 +266,13 @@ ALTER TABLE `silabus`
 -- AUTO_INCREMENT de la tabla `turno`
 --
 ALTER TABLE `turno`
-  MODIFY `id_turno` int(1) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_turno` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `unidad_didáctica`
+-- AUTO_INCREMENT de la tabla `unidad_d`
 --
-ALTER TABLE `unidad_didáctica`
-  MODIFY `id_unidad` int(10) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `unidad_d`
+  MODIFY `id_unidad` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
