@@ -5,7 +5,7 @@
         echo "eror al cargar archivo";
      } else {
         $permitidos = array("application/pdf");
-        $limite_kb = 1000;
+        $limite_kb = 3000;
 
      if(in_array($_FILES["silabus"]["type"], $permitidos) && $_FILES["silabus"]["size"]<= $limite_kb * 1024){
          $ruta = 'silabus/'.$id_insert.'/';
