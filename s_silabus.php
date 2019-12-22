@@ -1,6 +1,6 @@
 <?php
     require_once('bd/conexion.php');
-    $id_insert = $conn->insert_id;
+   
     if($_FILES["silabus"]["error"]>0){
         echo "eror al cargar archivo";
      } else {
@@ -8,7 +8,7 @@
         $limite_kb = 3000;
 
      if(in_array($_FILES["silabus"]["type"], $permitidos) && $_FILES["silabus"]["size"]<= $limite_kb * 1024){
-         $ruta = 'silabus/'.$id_insert.'/';
+         $ruta = 'silabus/';
          $silabus = $ruta.$_FILES["silabus"]["name"];
          if(!file_exists($ruta)){
              mkdir($ruta);
