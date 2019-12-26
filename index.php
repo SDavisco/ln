@@ -16,7 +16,7 @@
 	
 	<body>
 		<!--<?php include 'include/layout/header.php';?>-->
-		<form name="unidades_d" action="subird.php" method="POST" id="formulario">
+		<form name="unidades_d" action="bd/subird.php" method="POST" id="formulario">
 			<label>
 				unidad didactica
 			</label>

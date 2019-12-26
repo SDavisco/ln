@@ -23,7 +23,7 @@
 </head>    
     <body>
         <!--<?php include 'include/layout/header.php';?>-->
-    <form name="unidades" action="subir_unid.php" method="POST" id="formulario">
+    <form name="unidades" action="bd/subir_unid.php" method="POST" id="formulario">
     <label>UNIDAD</label>
     <select class="input" name="unidad">
         <option value="0">unidad</option>
@@ -65,5 +65,8 @@
         <?php }?>
     </select>
     <input class="" type="submit" name="submit" value="aceptar" id="reset">
+    <input type="checkbox" name="checkbox[]" value="EECTRONICA"> ELECTRONICA<br>
+		<input type="checkbox" name="checkbox[]" value="CONTABILIDAD">CONTABILIDAD<br>
+		<input type="checkbox" name="checkbox[]" value="ELECTRONICA">ELECTRONICA<br>
     </form>
 <body>

@@ -23,7 +23,7 @@
 </head>    
     <body>
         <!--<?php include 'include/layout/header.php';?>-->
-    <form name="unidades" action="s_silabus.php" method="POST" enctype="multipart/form-data" id="formulario">
+    <form name="unidades" action="bd/s_silabus.php" method="POST" enctype="multipart/form-data" id="formulario">
     <label> Archivo </label>
     <input type="file" name="silabus" accept="application/pdf">
     <input class="" type="submit" name="submit" value="aceptar" id="reset">

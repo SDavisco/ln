@@ -22,7 +22,7 @@ if(!isset($_SESSION["FLD_COD"])) header("Location: back/login.php");
 	<h1>Registro de Personal </h1>
 	</div>
     <div class="SecForm">
-     <form name="form" action="vcliente.php" method="POST" id="formulario">
+     <form name="form" action="bd/vcliente.php" method="POST" id="formulario">
      <div class="form-group">
         <label>
             Nombre Completo     

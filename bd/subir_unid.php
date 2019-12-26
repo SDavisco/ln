@@ -1,12 +1,13 @@
 <?php
-    require_once('bd/conexion.php');
+    require_once('conexion.php');
     $unidad_d = $_POST['unidad'];
     $docente = $_POST['docente'];
     $sem_ac = $_POST['sem_ac'];
     $sem_lec = $_POST['sem_lectivo'];
     $turno = $_POST['turno'];
-    $unidades="INSERT INTO UNIDAD_DOCENTE (nomb_unidad, docente, semestre_academico, semestre_lectivo, turno)
-    VALUES ('$unidad_d','$docente','$sem_ac','$sem_lec','$turno')";
+    $id_unidad= substr($unidad_d, 0,5);
+    $unidades="INSERT INTO UNIDAD_DOCENTE (id_unidad,nomb_unidad, docente, semestre_academico, semestre_lectivo, turno)
+    VALUES ('$id_unidad','$unidad_d','$docente','$sem_ac','$sem_lec','$turno')";
     if (mysqli_query($conn, $unidades))
     {
         

@@ -1,5 +1,5 @@
 <?php
-    require_once('bd/conexion.php');
+    require_once('conexion.php');
    
     if($_FILES["silabus"]["error"]>0){
         echo "eror al cargar archivo";

@@ -15,7 +15,7 @@
 </head>    
     <body>
         <!--<?php include 'include/layout/header.php';?>-->
-        <form name="docente" action="s_docente.php" method="POST" id="formulario">
+        <form name="docente" action="bd/s_docente.php" method="POST" id="formulario">
             <label>
                 docente
             </label>
