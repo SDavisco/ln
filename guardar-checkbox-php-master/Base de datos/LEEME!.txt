@@ -1,0 +1,2 @@
+Debes copiar la carpeta 'tutoriales_php' en la carpeta que administra las bases de datos
+de tu servidor, en mi caso, para AppServer esta es la ruta: C:\AppServ\MySQL\data 

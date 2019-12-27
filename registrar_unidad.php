@@ -64,9 +64,11 @@
         </option>
         <?php }?>
     </select>
-    <input class="" type="submit" name="submit" value="aceptar" id="reset">
+
     <input type="checkbox" name="checkbox[]" value="EECTRONICA"> ELECTRONICA<br>
 		<input type="checkbox" name="checkbox[]" value="CONTABILIDAD">CONTABILIDAD<br>
 		<input type="checkbox" name="checkbox[]" value="ELECTRONICA">ELECTRONICA<br>
+    <input class="" type="submit" name="submit" value="aceptar" id="reset">
+    
     </form>
 <body>
