@@ -22,6 +22,13 @@
 				$_SESSION["user_code"]=$row["user_code"];
 				$_SESSION["user_type"]=$row["user_type"];
 				header("Location: index2.php");
+			   }
+		  if (in_array('3',$row, true)){
+			@session_start();
+				$_SESSION["user_name"]=$row["user_name"];
+				$_SESSION["user_code"]=$row["user_code"];
+				$_SESSION["user_type"]=$row["user_type"];
+				header("Location: index3.php");
 		   	}
 
 		}else{

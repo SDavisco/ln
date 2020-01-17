@@ -1,4 +1,5 @@
 <?php
+//registro de unidad//
     @session_start();
 	if(!isset($_SESSION["user_name"])) header("Location: login.php");
     require ('bd/conexion.php');

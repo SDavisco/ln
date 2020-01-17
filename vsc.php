@@ -1,4 +1,5 @@
 <?php
+//listado//
 	require_once('conexion.php');
     date_default_timezone_set('America/Lima');
     $user_name = $_POST['vendedor'];

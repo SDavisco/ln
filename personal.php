@@ -1,4 +1,5 @@
 <?php
+//registro de personal//
 @session_start();
 if(!isset($_SESSION["FLD_COD"])) header("Location: back/login.php");
     require ('back/conexion.php');

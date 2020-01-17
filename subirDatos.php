@@ -1,4 +1,5 @@
 <?php
+//registro de unidad didactica//
 require ('conexion.php');
 <!DOCTYPE html>
     //listar unidades didacticas
