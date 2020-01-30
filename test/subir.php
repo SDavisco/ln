@@ -23,4 +23,5 @@ echo "<br> Nombre: ".$_FILES['img_up']["name"];      //nombre del archivo
 echo "<br> Tipo: ".$_FILES['img_up']["type"];      //tipo
 echo "<br> Nombre Temporal: ".$_FILES['img_up']["tmp_name"];  //nombre del archivo de la imagen temporal
 echo "<br> Tamanio: ".$_FILES['img_up']["size"]." bytes";      //tamaño
+echo $nuevo_path;
 ?>
