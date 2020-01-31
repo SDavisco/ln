@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/main.css"  type="text/css">
 </head>    
     <body>
-        <!--<?php include 'include/layout/header.php';?>-->
+       <?php include 'include/layout/header.php';?>
     <form name="unidades" action="bd/subir_unid.php" method="POST" id="formulario">
     <label>UNIDAD</label>
     <select class="input" name="unidad">

@@ -7,6 +7,12 @@ require ('conexion.php');
     $list_ud = $conn->query($u_didactica);
 ?>
 <!DOCTYPE html>
+<head>
+
+
+</head>
+<body>
+    <?php include 'include/layout/header.php';?>
 <form name="unidades_d" action="subird.php" method="POST" id="formulario">
 <label>
     unidad didactica
@@ -14,3 +20,4 @@ require ('conexion.php');
 <input type="text" name="unidad">
 <input class="" type="submit" name="submit" value="aceptar" id="reset">
 </form>
+</body>
