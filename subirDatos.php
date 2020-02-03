@@ -1,7 +1,6 @@
 <?php
 //registro de unidad didactica//
-require ('conexion.php');
-<!DOCTYPE html>
+require ('BD/conexion.php');
     //listar unidades didacticas
     $u_didactica = "SELECT nomb_unidad FROM unidad_didactica";
     $list_ud = $conn->query($u_didactica);
