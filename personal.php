@@ -1,8 +1,8 @@
 <?php
 //registro de personal//
 @session_start();
-if(!isset($_SESSION["FLD_COD"])) header("Location: back/login.php");
-    require ('back/conexion.php');
+	if(!isset($_SESSION["user_name"])) header("Location: login.php");
+    require ('BD/conexion.php');
     $query_tp = "SELECT * FROM tbl_tipo";
     $p_tipo = $conn->query($query_tp);
     $query_turnos= "SELECT * FROM tbl_turnos";
