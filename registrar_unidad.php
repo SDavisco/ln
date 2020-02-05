@@ -67,8 +67,11 @@
     </select>
 
     <input type="checkbox" name="checkbox[]" value="EECTRONICA"> ELECTRONICA<br>
-		<input type="checkbox" name="checkbox[]" value="CONTABILIDAD">CONTABILIDAD<br>
-		<input type="checkbox" name="checkbox[]" value="ELECTRONICA">INFORMATICA<br>
+	<input type="checkbox" name="checkbox[]" value="CONTABILIDAD">CONTABILIDAD<br>
+	<input type="checkbox" name="checkbox[]" value="ELECTRONICA">INFORMATICA<br>
+
+    <input type="file" name="silabus" accept="application/pdf">    
+    
     <input class="" type="submit" name="submit" value="aceptar" id="reset">
     
     </form>
