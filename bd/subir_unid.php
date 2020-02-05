@@ -28,10 +28,11 @@ echo "<h3>La imagen se subio correctamente</h3>";
 echo "<b>Info de la imagen subida:</b>";
 echo "<br> Nombre: ".$_FILES['silabus']["name"];      //nombre del archivo
 echo "<br> Tipo: ".$_FILES['silabus']["type"];      //tipo
-echo "<br> Nombre Temporal: ".$_FILES['silabus']["tmp_name"];  //nombre del archivo de la imagen temporal
-echo "<br> Tamanio: ".$_FILES['silabus']["size"]." bytes";      //tamaño
+//echo "<br> Nombre Temporal: ".$_FILES['silabus']["tmp_name"];  //nombre del archivo de la imagen temporal
+echo "<br> Tamaño: ".$_FILES['silabus']["size"]." bytes";      //tamaño
 echo $ruta;
-    $unidades="INSERT INTO unidad_docente (id_unidad, nomb_unidad, docente, semestre_academico, semestre_lectivo, turno, silabus) VALUES ('$id_unidad','$unidad_d','$docente','$sem_ac','$sem_lec','$turno' . '$silabus')";
+//
+$unidades="INSERT INTO unidad_docente (id_unidad, nomb_unidad, docente, semestre_academico, semestre_lectivo, turno, silabus) VALUES ('$id_unidad','$unidad_d','$docente','$sem_ac','$sem_lec','$turno','$name')";
 
     if (mysqli_query($conn, $unidades))
     {
