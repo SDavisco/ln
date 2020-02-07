@@ -30,7 +30,7 @@ echo "<br> Nombre: ".$_FILES['silabus']["name"];      //nombre del archivo
 echo "<br> Tipo: ".$_FILES['silabus']["type"];      //tipo
 //echo "<br> Nombre Temporal: ".$_FILES['silabus']["tmp_name"];  //nombre del archivo de la imagen temporal
 echo "<br> Tamaño: ".$_FILES['silabus']["size"]." bytes";      //tamaño
-echo $name;
+echo "<br> Nombre:".$name;
 //
 $unidades="INSERT INTO unidad_docente (id_unidad, nomb_unidad, docente, semestre_academico, semestre_lectivo, turno, silabus) VALUES ('$id_unidad','$unidad_d','$docente','$sem_ac','$sem_lec','$turno','$name')";
 

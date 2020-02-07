@@ -3,7 +3,7 @@
 	if(!isset($_SESSION["user_name"])) header("Location: login.php");
 	require ('bd/conexion.php');
     //CONSULTAS PARA TRAER DATOS
-    $silabus = "SELECT silabus FROM unidad_docente";
+    $silabus = "SELECT * FROM unidad_docente";
     $list_s = $conn->query($silabus);
 ?>
 <!DOCTYPE html>
@@ -16,8 +16,10 @@
 	<body>
     <?php WHILE($row = $list_s->fetch_assoc()){?>
     <div>
-    <label>hola</label>
-    <iframe src="silabus/<?php echo $row['silabus']; ?>" alt="">
+    <label>UNIDAD DIDACTICA: <?php echo $row ['nomb_unidad']; ?></label><br>
+    <label>DOCENTE: <?php echo $row ['docente']; ?></label><br>
+    <label>DOCENTE: <?php echo $row ['semestre_academico']; ?></label><br>
+    <embed src="silabus/<?php echo $row['silabus']; ?>" alt="">
     </div>
     <?php }?>
 	</body>

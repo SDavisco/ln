@@ -4,5 +4,5 @@ if(!isset($_SESSION["user_name"])) header("Location: login.php");
 /*
 Pagina para los administradores
 */
- include 'include/layout/header.php';
+ include 'include/layout/header1.php';
 ?>
