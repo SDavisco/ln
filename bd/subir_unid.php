@@ -5,7 +5,6 @@
     $sem_ac = $_POST['sem_ac'];
     $sem_lec = $_POST['sem_lectivo'];
     $turno = $_POST['turno'];
-    $id_unidad= substr($unidad_d, 0,5);
 //capturamos los datos del fichero subido    
 $type=$_FILES['silabus']['type'];
 $tmp_name = $_FILES['silabus']["tmp_name"];
@@ -46,7 +45,7 @@ $unidades="INSERT INTO unidad_docente (id_unidad, nomb_unidad, docente, semestre
             // realizamos el ciclo
                while(list($key,$value) = each($_POST['checkbox'])) 
                 {
-            $sql=("INSERT INTO unidad_carrera (unidad, carrera) VALUES ('$id_unidad','$value')");
+            $sql=("INSERT INTO unidad_carrera (unidad, carrera) VALUES ('$unidad_d','$value')");
                     if(mysqli_query($conn, $sql)) {
 
                     }
