@@ -16,6 +16,7 @@
 			<ul>
 
                 <li><a href="ver_silabus.php">Silabus</a></li>
+                <li><a href="registrar_alumno.php">alumno</a></li>
 			</ul>
 </div>
 </body>
