@@ -46,7 +46,7 @@
             <?php }?>
         </select>
     <label>SEMESTRE LECTIVO</label>    
-    <input class="" type="date" name="end_fecha" id="date">
+    <input class="" type="date" name="lectivo" id="date">
     <select>
         <option value="I">I</option>
         <option value="II">II</option>
