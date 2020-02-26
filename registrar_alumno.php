@@ -39,15 +39,22 @@
         </select>
     <label>TURNO</label>
         <select name="turno">
-            <option value="0">turno</option>
+            <option value="0">--turno--</option>    
             <?php WHILE($row = $list_t->fetch_assoc()){?>
 		    <option value="<?php echo $row['turno'];?>"><?php echo $row['turno'];?>
             </option>
             <?php }?>
         </select>
     <label>SEMESTRE LECTIVO</label>    
-    <input class="" type="date" name="lectivo" id="date">
-    <select>
+    <?php
+    $cont = date('Y');
+    ?>
+    <select id="sel1" name="cont">
+    <?php while ($cont >= 1990) { ?>
+    <option value="<?php echo($cont); ?>"><?php echo($cont); ?></option>
+    <?php $cont = ($cont-1); } ?>
+    </select>
+    <select name="sem">
         <option value="I">I</option>
         <option value="II">II</option>
     </select>
