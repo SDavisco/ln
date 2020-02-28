@@ -2,7 +2,7 @@
 //registro de profesores//
     @session_start();
 	if(!isset($_SESSION["user_name"])) header("Location: login.php");
-    require ('bd/conexion.php');
+    require ('../bd/conexion.php');
     //CONSULTAS PARA TRAER DATOS
     $docentes = "SELECT docente FROM docente";
     $list_d = $conn->query($docentes);
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/main.css"  type="text/css">
 </head>    
     <body>
-        <!--<?php include 'include/layout/header.php';?>-->
+        <!--<?php include 'layout/header.php';?>-->
         <form name="docente" action="bd/s_docente.php" method="POST" id="formulario">
             <label>
                 docente

@@ -2,7 +2,7 @@
 //registro de personal//
 @session_start();
 	if(!isset($_SESSION["user_name"])) header("Location: login.php");
-    require ('BD/conexion.php');
+    require ('../bd/conexion.php');
     $query_tp = "SELECT * FROM tbl_tipo";
     $p_tipo = $conn->query($query_tp);
     $query_turnos= "SELECT * FROM tbl_turnos";
@@ -17,7 +17,7 @@
     <meta charset="utf-8">
 </head>
 <body>
-<?php include 'include/layout/header.php';?>
+<?php include 'layout/header.php';?>
     
     <div class="titulo">
 	<h1>Registro de Personal </h1>

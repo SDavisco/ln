@@ -1,6 +1,6 @@
 <?php
 //registro de unidad didactica//
-require ('BD/conexion.php');
+require ('../bd/conexion.php');
     //listar unidades didacticas
     $u_didactica = "SELECT nomb_unidad FROM unidad_didactica";
     $list_ud = $conn->query($u_didactica);
@@ -11,7 +11,7 @@ require ('BD/conexion.php');
 
 </head>
 <body>
-    <?php include 'include/layout/header.php';?>
+    <?php include 'layout/header.php';?>
 <form name="unidades_d" action="subird.php" method="POST" id="formulario">
 <label>
     unidad didactica

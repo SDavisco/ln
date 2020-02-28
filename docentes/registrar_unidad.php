@@ -2,7 +2,7 @@
 //registro de unidad//
     @session_start();
 	if(!isset($_SESSION["user_name"])) header("Location: login.php");
-    require ('bd/conexion.php');
+    require ('../bd/conexion.php');
     //CONSULTAS PARA TRAER DATOS
     $docentes = "SELECT docente FROM docente";
     $list_d = $conn->query($docentes);
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/main.css"  type="text/css">
 </head>    
     <body>
-       <?php include 'include/layout/header.php';?>
+       <?php include 'layout/header.php';?>
     <form  enctype="multipart/form-data" name="unidades" action="bd/subir_unid.php" method="POST" id="formulario">
     <label>UNIDAD</label>
     <select class="input" name="unidad">
