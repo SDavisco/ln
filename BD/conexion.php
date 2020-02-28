@@ -1,5 +1,5 @@
 <?php
- $conn = new mysqli('localhost','admin','admin123','silabus');
+ $conn = new mysqli('localhost','davisco_sistemas','admin123','davisco_ln');
   if($conn->connect_error){
  	echo $error -> $connect_error;
  }
