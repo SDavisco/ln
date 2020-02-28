@@ -1,7 +1,7 @@
 <?php
 	@session_start();
 	if(!isset($_SESSION["user_name"])) header("Location: login.php");
-	require ('bd/conexion.php');
+	require ('../bd/conexion.php');
 	//CONSULTAS PARA TRAER DATOS
 	$u_didactica = "SELECT nomb_unidad FROM unidad_d";
 	$list_ud = $conn->query($u_didactica);
@@ -29,7 +29,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                    <th>LISTA DE CURSOS </br>
+                    <th>LISTA DE CURSOS GG </br>
                     </tr>
                 </thead>
                 <tbody>

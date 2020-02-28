@@ -1,6 +1,6 @@
 <?php
 	
-	require ('bd/conexion.php');
+	require ('../bd/conexion.php');
 
 	if(!empty($_POST)){
 		$usuario = $_POST["usuario"];
@@ -14,21 +14,8 @@
 				$_SESSION["user_name"]=$row["correo"];
 				$_SESSION["user_code"]=$row["user_code"];
 				$_SESSION["user_type"]=$row["user_type"];
-				header("Location: index1.php");
+				header("Location: index.php");
 		   	}	
-		  if (in_array('2',$row, true)){
-			@session_start();
-				$_SESSION["user_name"]=$row["correo"];
-				header("Location: index2.php");
-			   }
-		  if (in_array('3',$row, true)){
-			@session_start();
-				$_SESSION["correo"]=$row["correo"];
-				$_SESSION["user_code"]=$row["user_code"];
-				$_SESSION["user_type"]=$row["user_type"];
-				header("Location: index3.php");
-		   	}
-
 		}else{
 			echo "Usuario o contraseña no son válidos";
 		}
