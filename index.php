@@ -16,33 +16,9 @@
 	
 	<body>
 		<!--<?php include 'include/layout/header.php';?>-->
-		<form name="unidades_d" action="bd/subird.php" method="POST" id="formulario">
-			<label>
-				unidad didactica
-			</label>
-			<input type="text" name="unidad">
-			<input class="" type="submit" name="submit" value="aceptar" id="reset">
-		</form>
-		<!-- mostrar datos-->
-		<div class="SecDatos">
-	    <div class="panel-body">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                    <th>LISTA DE CURSOS </br>
-                    </tr>
-                </thead>
-                <tbody>
-	    <?php
-	    WHILE ($row =  $list_ud ->fetch_array(MYSQLI_BOTH)) { ?>
-	               <tr>
-                        <td><?php echo $row['nomb_unidad']; ?></td>
-                                                                                    
-                    </tr>
-            	<?php } ?>
-                </tbody>
-             </table>
-            </div>
-	</div>
 	</body>
+	<ul>
+		<li><a href="alumnos/index.php">Silabus</a></li>
+		<li><a href="docentes/index.php">Silabus</a></li>
+	</ul>
 </html>
