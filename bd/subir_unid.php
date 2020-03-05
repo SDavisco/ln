@@ -31,7 +31,7 @@ echo "<br> Tipo: ".$_FILES['silabus']["type"];      //tipo
 echo "<br> Tamaño: ".$_FILES['silabus']["size"]." bytes";      //tamaño
 echo "<br> Nombre:".$name;
 //
-$unidades="INSERT INTO unidad_docente (id_unidad, nomb_unidad, docente, semestre_academico, semestre_lectivo, turno, silabus) VALUES ('$id_unidad','$unidad_d','$docente','$sem_ac','$sem_lec','$turno','$name')";
+$unidades="INSERT INTO unidad_docente (nomb_unidad, docente, semestre_academico, semestre_lectivo, turno, silabus) VALUES ('$unidad_d','$docente','$sem_ac','$sem_lec','$turno','$name')";
 
     if (mysqli_query($conn, $unidades))
     {
@@ -55,3 +55,6 @@ $unidades="INSERT INTO unidad_docente (id_unidad, nomb_unidad, docente, semestre
                 }
            }
 ?>
+
+<script language="javascript">
+window.location="../docentes/registrar_alumno.php";

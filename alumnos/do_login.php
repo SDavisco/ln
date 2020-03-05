@@ -12,8 +12,7 @@
 		   if (in_array('1',$row, true)){
 			@session_start();
 				$_SESSION["user_name"]=$row["correo"];
-				$_SESSION["user_code"]=$row["user_code"];
-				$_SESSION["user_type"]=$row["user_type"];
+				$_SESSION["user_code"]=$row["id_usuario"];
 				header("Location: index.php");
 		   	}	
 		}else{

@@ -14,6 +14,8 @@
     $list_u = $conn->query($unidad);
     $turno = "SELECT turno FROM turno";
     $list_t = $conn->query($turno);
+    $carrera = "SELECT nomb_carrera FROM carrera";
+    $list_c = $conn->query($carrera);
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@
 </head>    
     <body>
        <?php include 'layout/header.php';?>
-    <form  enctype="multipart/form-data" name="unidades" action="bd/subir_unid.php" method="POST" id="formulario">
+    <form  enctype="multipart/form-data" name="unidades" action="../bd/subir_unid.php" method="POST" id="formulario">
     <label>UNIDAD</label>
     <select class="input" name="unidad">
         <option value="0">unidad</option>
@@ -65,10 +67,10 @@
         </option>
         <?php }?>
     </select>
+    <?php WHILE($row5 = $list_c->fetch_assoc()){?>
+    <input type="checkbox" name="checkbox[]" value="<?php echo $row5['nomb_carrera'];?>"><?php echo $row5['nomb_carrera'];?><br>
+    <?php }?>
 
-    <input type="checkbox" name="checkbox[]" value="EECTRONICA"> ELECTRONICA<br>
-	<input type="checkbox" name="checkbox[]" value="CONTABILIDAD">CONTABILIDAD<br>
-	<input type="checkbox" name="checkbox[]" value="ELECTRONICA">INFORMATICA<br>
 
     <input type="file" name="silabus" accept="application/pdf">    
     

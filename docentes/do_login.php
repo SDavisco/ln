@@ -11,16 +11,10 @@
 		  $row = mysqli_fetch_array($rs);
 		   if (in_array('2',$row, true)){
 			@session_start();
-				$_SESSION["user_name"]=$row["user_name"];
-				$_SESSION["user_code"]=$row["user_cod"];
+				$_SESSION["user_name"]=$row["docente"];
+				$_SESSION["user_code"]=$row["id_usuario"];
 				header("Location: index.php");
 		   	}	
-		  if (in_array('2',$row, true)){
-			@session_start();
-				$_SESSION["user_name"]=$row["user_name"];
-				$_SESSION["user_code"]=$row["user_cod"];
-				header("Location: index.php");
-			   }
 		}else{
 			echo "Usuario o contraseña no son válidos";
 		}
