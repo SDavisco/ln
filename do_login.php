@@ -14,7 +14,7 @@
 				$_SESSION["user_name"]=$row["correo"];
 				$_SESSION["user_code"]=$row["user_code"];
 				$_SESSION["user_type"]=$row["user_type"];
-				header("Location: index1.php");
+				header("Location: index.php");
 		   	}	
 		  if (in_array('2',$row, true)){
 			@session_start();
