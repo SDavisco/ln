@@ -18,7 +18,7 @@
 		<!--<?php include 'include/layout/header.php';?>-->
 	</body>
 	<ul>
-		<li><a href="alumnos/index.php">Silabus</a></li>
-		<li><a href="docentes/index.php">Silabus</a></li>
+		<li><a href="alumnos/index.php">Silabus Alumnos</a></li>
+		<li><a href="docentes/index.php">Silabus Docentes</a></li>
 	</ul>
 </html>
