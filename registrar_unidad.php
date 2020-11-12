@@ -33,69 +33,8 @@
 </head>    
 <body class="hold-transition sidebar-mini layout-fixed"s>
 <div class="wrapper">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Inicio</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Silabus</a>
-      </li>
-    </ul>
-
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
-
-    <!-- Right navbar links -->
-    
-  </nav>
-  <!-- /.navbar -->
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-  </aside>
+    <?php include 'header.php';?>
+   <!-- Main Sidebar Container --> 
     <div class="content-wrapper">
         <section class="content">
         <form  enctype="multipart/form-data" name="unidades" action="bd/subir_unid.php" method="POST" id="formulario">
@@ -199,59 +138,6 @@
                 </div>
             </form>                    
         </section>
-
-    <form  enctype="multipart/form-data" name="unidades" action="bd/subir_unid.php" method="POST" id="formulario">
-    <label>UNIDAD</label>
-    <select class="input" name="unidad">
-        <option value="0">unidad</option>
-            <?php WHILE($row1 = $list_u->fetch_assoc()){?>
-        <option value="<?php echo $row1['nomb_unidad'];?>"><?php echo $row1['nomb_unidad'];?>
-        </option>
-        <?php }?>
-    </select>
-    <label>DOCENTE</label>
-    <select class="input" name="docente">
-        <option value="0">docente</option>
-            <?php WHILE($row2 = $list_d->fetch_assoc()){?>
-        <option value="<?php echo $row2['docente'];?>"><?php echo $row2['docente'];?>
-        </option>
-        <?php }?>
-    </select>
-    <label>SEMESTRE ACADEMICO</label>
-    <select class="input" name="sem_ac">
-        <option value="0">sem-academico</option>
-            <?php WHILE($row3 = $list_sa->fetch_assoc()){?>
-        <option value="<?php echo $row3['semestre'];?>"><?php echo $row3['semestre'];?>
-        </option>
-        <?php }?>
-    </select>
-        <label>TURNO</label>
-    <select class="input" name="turno">
-        <option value="0">turno</option>
-            <?php WHILE($row5 = $list_t->fetch_assoc()){?>
-        <option value="<?php echo $row5['turno'];?>"><?php echo $row5['turno'];?>
-        </option>
-        <?php }?>
-    </select>
-    <label>SEMESTRE LECTIVO</label>
-    <select class="input" name="sem_lectivo">
-        <option value="0">sem-lectivo</option>
-            <?php WHILE($row4 = $list_sl->fetch_assoc()){?>
-        <option value="<?php echo $row4['sem_lectivo'];?>"><?php echo $row4['sem_lectivo'];?>
-        </option>
-        <?php }?>
-    </select>
-
-    <input type="checkbox" name="checkbox[]" value="EECTRONICA"> ELECTRONICA<br>
-	<input type="checkbox" name="checkbox[]" value="CONTABILIDAD">CONTABILIDAD<br>
-	<input type="checkbox" name="checkbox[]" value="ELECTRONICA">INFORMATICA<br>
-
-    <input type="file" name="silabus" accept="application/pdf">    
-    
-    <input class="" type="submit" name="submit" value="aceptar" id="reset">
-    
-    </form>
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
