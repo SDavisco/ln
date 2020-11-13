@@ -1,5 +1,5 @@
 <?php
-    require_once('bd/conexion.php');
+    require_once('conexion.php');
     $docente = $_POST['docente'];
     $docentes="INSERT INTO docente (docente) VALUES ('$docente')";
     if (mysqli_query($conn, $docentes))
@@ -11,5 +11,5 @@
     }
     ?>
     <script language="javascript">
-    window.location="docentes.php";
+    window.location="../registro_docente.php";
     </script>

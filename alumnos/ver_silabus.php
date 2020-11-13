@@ -5,17 +5,29 @@
     //CONSULTAS PARA TRAER DATOS
     $silabus = "SELECT * FROM unidad_docente";
     $list_s = $conn->query($silabus);
-?>
+?>  
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Perfil</title>
-		<link rel="stylesheet" href="css/main.css"  type="text/css">
-    </head>	
-	<body>
-    <?php include 'layout/header.php';?>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista de Silabus</title>
 
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    </head>	
+	<body class="hold-transition sidebar-mini>
+<?php include '../header.php';?>
+
+<div class="content-wrapper">    
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -23,38 +35,37 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">Silabus</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>UNIDAD DIDACTICA</th>
+                    <th>DOCENTE</th>
+                    <th>S. ACADEMICO</th>
+                    <th>SILABUS</th>
                   </tr>
                   </thead>
                   <tbody>
+                    <?php
+                    WHILE($row = $list_s->fetch_assoc()){ 
+                    ?>
                   <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
+                    <td><?php echo $row ['nomb_unidad'];?></td>
+                    <td><?php echo $row ['docente'];?></td>
+                    <td><?php echo $row ['semestre_academico'];?></td>
+                    <td><embed src="../silabus/<?php echo $row['silabus']; ?>" alt=""></td>
                   </tr>
+                  <?php }?>
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>UNIDAD DIDACTICA</th>
+                    <th>DOCENTE</th>
+                    <th>S. ACADEMICO</th>
+                    <th>SILABUS</th>
                   </tr>
                   </tfoot>
                 </table>
@@ -72,18 +83,56 @@
       </div>
       <!-- /.container-fluid -->
     </section>
-    <?php
-    $query = "SELECT nomb_unidad, docente, semestre_academico,silabus
-    FROM UNIDAD_DOCENTE ORDER BY id_unidad ASC";
-    $list_s = $conn->query($query);
-    ?>
-    <?php WHILE($row = $list_s->fetch_assoc()){?>
-    <div>
-    <label>UNIDAD DIDACTICA: <?php echo $row ['nomb_unidad']; ?></label><br>
-    <label>DOCENTE: <?php echo $row ['docente']; ?></label><br>
-    <label>DOCENTE: <?php echo $row ['semestre_academico']; ?></label><br>
-    <embed src="../silabus/<?php echo $row['silabus']; ?>" alt="">
-    </div>
-    <?php }?>
-	</body>
+</div>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+</div>
+
+</body>
 </html>

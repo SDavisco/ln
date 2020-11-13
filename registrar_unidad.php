@@ -31,10 +31,8 @@
     <title>REGISTAR-UNIDADES</title>
     <!-- <link rel="stylesheet" href="css/main.css"  type="text/css"> -->
 </head>    
-<body class="hold-transition sidebar-mini layout-fixed"s>
-<div class="wrapper">
-    <?php include 'header.php';?>
-   <!-- Main Sidebar Container --> 
+<body class="hold-transition sidebar-mini layout-fixed">
+<?php include 'header.php';?>
     <div class="content-wrapper">
         <section class="content">
         <form  enctype="multipart/form-data" name="unidades" action="bd/subir_unid.php" method="POST" id="formulario">
@@ -133,7 +131,7 @@
                 </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Subir</button>
                 </div>           
                 </div>
             </form>                    
