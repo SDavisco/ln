@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
     </head>	
 	<body class="hold-transition sidebar-mini>
-<?php include '../header.php';?>
+<?php include 'layout/header.php';?>
 
 <div class="content-wrapper">    
     <!-- Main content -->

@@ -18,7 +18,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/datawTables.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
@@ -35,7 +35,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">Lista de Silabus</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -56,17 +56,16 @@
                     <td><?php echo $row ['nomb_unidad'];?></td>
                     <td><?php echo $row ['docente'];?></td>
                     <td><?php echo $row ['semestre_academico'];?></td>
-                    <td><embed src="silabus/<?php echo $row['silabus']; ?>" alt=""></td>
                     <td><a href="silabus/<?php echo $row['silabus']; ?>" target="_blank"><?php echo $row['silabus']; ?></a></td>  
                   </tr>
                   <?php }?>
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
+                    <th>UNIDAD DIDACTICA</th>
+                    <th>DOCENTE</th>
+                    <th>S. ACADEMICO</th>
+                    <th>SILABUS</th>
                   </tr>
                   </tfoot>
                 </table>
