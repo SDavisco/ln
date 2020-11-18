@@ -2,7 +2,7 @@
 //registro de profesores//
     @session_start();
     if(!isset($_SESSION["user_name"])) header("Location: login.php");
-    require ('bd/conexion.php');
+    require ('../bd/conexion.php');
     //CONSULTAS PARA TRAER DATOS
     $docentes = "SELECT docente FROM docente";
     $list_d = $conn->query($docentes);
@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
 </head>    
     <body class="hold-transition sidebar-mini layout-fixed">
-    <?php include 'header.php';?>
+    <?php include 'layout/header.php';?>
     <section class="content-wrapper">    
         <form name="docente" action="bd/s_docente.php" method="POST" id="formulario">
         <div class="card card-primary">

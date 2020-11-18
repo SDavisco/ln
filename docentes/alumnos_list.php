@@ -3,7 +3,7 @@
     if(!isset($_SESSION["user_name"])) header("Location: login.php");
     require ('../bd/conexion.php');
     //CONSULTAS PARA TRAER DATOS
-    $silabus = "SELECT * FROM unidad_docente";
+    $silabus = "SELECT * FROM alumnos";
     $list_s = $conn->query($silabus);
 ?>  
 <!DOCTYPE html>

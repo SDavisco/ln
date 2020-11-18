@@ -4,7 +4,7 @@
 	if(!isset($_SESSION["user_name"])) header("Location: login.php");
     require ('bd/conexion.php');
     //CONSULTAS PARA TRAER DATOS
-    $carrera = "SELECT nomb_carrera FROM carrera";
+    $carrera = "SELECT * FROM carrera";
     $list_c = $conn->query($carrera);
     $sem_ac = "SELECT semestre FROM semestre_academico";
     $list_sa = $conn->query($sem_ac);
@@ -62,7 +62,7 @@
                     <select class="custom-select rounded-0" name="carrera">
                         <option value="0">CARRERA</option>
                         <?php WHILE($row = $list_c->fetch_assoc()){?>
-                    <option value="<?php echo $row['nomb_carrera'];?>"><?php echo $row['nomb_carrera'];?>
+                    <option value="<?php echo $row['id_carrera'];?>"><?php echo $row['nomb_carrera'];?>
                        </option>
                         <?php }?>
                     </select>

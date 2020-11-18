@@ -24,7 +24,7 @@
 		<title>Cursos</title>
 	</head>
 <body>
-    <?php include 'header.php';?>
+    <?php include 'layout/header.php';?>
 <section class="content-wrapper">    
         <form name="unidades_d" action="bd/subird.php" method="POST" id="formulario">
         <div class="card card-primary">

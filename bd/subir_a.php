@@ -11,9 +11,11 @@
     
 $nuevo_alum ="INSERT INTO alumno (dni, nombre, apellido, correo, carrera, semestre_academico,semestre_lectivo, turno) 
 VALUES ('$dni', '$nombre', '$apellido', '$email', '$carrera', '$semestre', '$s_l', '$turno')";
-if (mysqli_query($conn, $nuevo_alum))
 {
-    
+    if (mysqli_query($conn, $acceso))
+        {
+
+        }
 }
 else{
     echo "error". $nuevo_alum."<br>".mysqli_error($conn);

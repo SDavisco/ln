@@ -27,9 +27,9 @@
 	<body class="hold-transition sidebar-mini>
 <?php include 'layout/header.php';?>
 
-<div class="content-wrapper">    
+<div>    
     <!-- Main content -->
-    <section class="content">
+        <section class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
@@ -56,7 +56,7 @@
                     <td><?php echo $row ['nomb_unidad'];?></td>
                     <td><?php echo $row ['docente'];?></td>
                     <td><?php echo $row ['semestre_academico'];?></td>
-                    <td><embed src="../silabus/<?php echo $row['silabus']; ?>" alt=""></td>
+                    <td><a href="../silabus/<?php echo $row['silabus']; ?>" target="_blank"><?php echo $row['silabus']; ?></a></td>
                   </tr>
                   <?php }?>
                   </tbody>
