@@ -2,7 +2,7 @@
 //registro de unidad//
     @session_start();
     if(!isset($_SESSION["user_name"])) header("Location: login.php");
-    require ('bd/conexion.php');
+    require ('../bd/conexion.php');
     //CONSULTAS PARA TRAER DATOS
     $carrera = "SELECT nomb_carrera FROM carrera";
     $list_c = $conn->query($carrera);
@@ -29,7 +29,7 @@
     <!-- <link rel="stylesheet" href="css/main.css"  type="text/css"> -->
 </head>    
     <body class="hold-transition sidebar-mini layout-fixed">
-    <?php include 'header.php';?>
+    <?php include 'layout/header.php';?>
     <div class="content-wrapper">
         <section class="content">
         <form  enctype="multipart/form-data" name="unidades" action="bd/subir_a.php" method="POST" id="formulario">

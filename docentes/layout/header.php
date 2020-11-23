@@ -91,6 +91,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="alumnos_l.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Alumnos</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="../logout.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cerrar Sesion</p>
