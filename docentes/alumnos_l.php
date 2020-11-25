@@ -61,6 +61,7 @@
                     <td><?php echo $row ['semestre_academico'];?></td>
                     <td><?php echo $row ['semestre_lectivo'];?></td>
                     <td><?php echo $row ['turno'];?></td>
+                    <td><?php echo "<a href='editar_a.php?id=".$row['id_al']."'>Modificar</a>";?></td>
                   </tr>
                   <?php }?>
                   </tbody>
