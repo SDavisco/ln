@@ -1,5 +1,6 @@
 <?php
     require_once('conexion.php');
+    $id=$_POST['id_al'];
     $dni = $_POST['dni'];
     $nombre = $_POST['nombres'];
     $apellido = $_POST['apellidos'];
@@ -10,16 +11,13 @@
     $turno = $_POST['turno'];
     $pass = $_POST['pass'];
     
-$nuevo_alum ="INSERT INTO alumno (dni, nombre, apellido, correo, carrera, semestre_academico,semestre_lectivo, turno, pass) 
-VALUES ('$dni', '$nombre', '$apellido', '$email', '$carrera', '$semestre', '$s_l', '$turno', '$pass' )";
-{
-    if (mysqli_query($conn, $nuevo_alum))
-        {
+$update_alum ="UPDATE alumno SET dni='$dni', nombre='$nombre', apellido='$apellido', correo='$email', carrera='$carrera', semestre_academico='$semestre', semestre_lectivo='$s_l', turno='$turno', pass='$pass' WHERE id_al='$id'";
 
-        }
+if (mysqli_query($conn, $update_alum))
+{
 }
 else{
-    echo "error". $nuevo_alum."<br>".mysqli_error($conn);
+    echo "error". $update_alum."<br>".mysqli_error($conn);
 }
 ?>
 <script language="javascript">

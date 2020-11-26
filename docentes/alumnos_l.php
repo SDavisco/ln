@@ -48,6 +48,7 @@
                     <th>Sem. Academico</th>
                     <th>Sem. Lectivo</th>
                     <th>Turno</th>
+                    <th>Acciones</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -73,6 +74,7 @@
                     <th>Sem. Academico</th>
                     <th>Sem. Lectivo</th>
                     <th>Turno</th>
+                    <th>Acciones</th>
                   </tr>
                   </tfoot>
                 </table>
