@@ -23,6 +23,10 @@
   <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
+  <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../plugins/toastr/toastr.min.css">
     </head> 
     <body class="hold-transition sidebar-mini>
 <?php include 'layout/header.php';?>
@@ -46,6 +50,7 @@
                     <th>DOCENTE</th>
                     <th>S. ACADEMICO</th>
                     <th>SILABUS</th>
+                    <th>Acciones</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -57,6 +62,7 @@
                     <td><?php echo $row ['docente'];?></td>
                     <td><?php echo $row ['semestre_academico'];?></td>
                     <td><a href="../silabus/<?php echo $row['silabus']; ?>" target="_blank"><?php echo $row['silabus']; ?></a></td>
+                    <td><?php echo "<a href='editar_s.php?id=".$row['id_unidad']."'>Modificar</a>";?></td>
                   </tr>
                   <?php }?>
                   </tbody>
@@ -66,6 +72,7 @@
                     <th>DOCENTE</th>
                     <th>S. ACADEMICO</th>
                     <th>SILABUS</th>
+                    <th>Acciones</th>
                   </tr>
                   </tfoot>
                 </table>

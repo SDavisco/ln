@@ -57,4 +57,4 @@ $unidades="INSERT INTO unidad_docente (nomb_unidad, docente, semestre_academico,
 ?>
 <!-- Regresar al registro -->
 <script language="javascript">
-window.location="../docentes/registrar_alumno.php";
+window.location="../docentes/registrar_silabus.php";
