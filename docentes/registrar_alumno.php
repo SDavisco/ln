@@ -36,7 +36,7 @@
     <?php include 'layout/header.php';?>
     <div class="content-wrapper">
         <section class="content">
-        <form  enctype="multipart/form-data" name="unidades" action="bd/subir_a.php" method="POST" id="formulario">
+        <form  enctype="multipart/form-data" name="unidades" action="../bd/subir_a.php" method="POST" id="formulario">
         <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Registrar Alumno</h3>
@@ -103,7 +103,7 @@
                 </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Actualizar</button>
+                  <button type="submit" class="btn btn-primary">Registrar</button>
                 </div>           
               </div>
               </div>

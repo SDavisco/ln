@@ -21,5 +21,5 @@ else{
 }
 ?>
 <script language="javascript">
-window.location="../docentes/registrar_alumno.php";
+window.location="../docentes/alumnos_l.php";
 </script>

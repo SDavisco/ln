@@ -62,7 +62,7 @@
                     <td><?php echo $row ['docente'];?></td>
                     <td><?php echo $row ['semestre_academico'];?></td>
                     <td><a href="../silabus/<?php echo $row['silabus']; ?>" target="_blank"><?php echo $row['silabus']; ?></a></td>
-                    <td><?php echo "<a href='editar_s.php?id=".$row['id_unidad']."'>Modificar</a>";?></td>
+                    <td><?php echo "<a href='../bd/delete_s.php?id=".$row['id_unidad']."'>Eliminar</a>";?></td>
                   </tr>
                   <?php }?>
                   </tbody>

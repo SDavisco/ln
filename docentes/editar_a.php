@@ -144,35 +144,3 @@ $(function () {
 </div>
 </body>
 </html>
-<div class="DatosSolicitud">
-      <?php $DatosSC= $s_cotizacion ->fetch_array(MYSQLI_BOTH)?>
-            <ul>
-                <li>
-                    <h4>Cliente</h4>
-                    <p><?php echo $DatosSC['cli_nomb']?></p>
-                </li>
-                <li>
-                    <h4>Persona de Contacto</h4>
-                    <p><?php echo $DatosSC['cli_cont']?></p>
-                </li>
-                <li>
-                    <h4>Correo Electronico</h4>
-                    <p><?php echo $DatosSC['cli_mail']?></p>
-                </li>
-                <li>
-                    <h4>Fecha de Solicitud</h4>
-                    <p><?php echo $DatosSC['correo_fecha']?></p>
-                </li>
-                <li>
-                    <h4>Fecha Limite</h4>
-                    <p><?php echo $DatosSC['fin_fecha']?></p>
-                </li>
-                <li>
-                    <h4>Descripcion</h4>
-                    <p><?php echo $DatosSC['descripcion']?></p>
-                </li>
-                
-            </ul>
-      
-        
-    </div>

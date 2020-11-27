@@ -30,9 +30,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index.php" class="nav-link">Inicio</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="silabus" class="nav-link">Silabus</a>
-      </li>
     </ul>
 
     <!-- SEARCH FORM -->
@@ -44,7 +41,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
+    <a href="index.php" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="Admin" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Silabus</span>
     </a>
@@ -54,7 +51,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-          <a href="#" class="d-block"><?php echo $_SESSION["user_name"];?></a>
+          <a href="index.php" class="d-block"><?php echo $_SESSION["user_name"];?></a>
         </div>
       </div>
 
@@ -73,9 +70,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="registrar_unidad.php" class="nav-link">
+                <a href="registrar_silabus.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Re. unidad</p>
+                  <p>Re. silabus</p>
                 </a>
               </li>
               <li class="nav-item">
