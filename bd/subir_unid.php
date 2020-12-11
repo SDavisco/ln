@@ -54,7 +54,21 @@ $unidades="INSERT INTO unidad_docente (nomb_unidad, docente, semestre_academico,
                     }
                 }
            }
+        else{
+            echo "<h3>La imagen se subio correctamente</h3>";
+            // Los posible valores que puedes obtener de la imagen son:
+            echo "<b>Info de la imagen subida:</b>";
+            echo "<br> Nombre: ".$_FILES['silabus']["name"];      //nombre del archivo
+            echo "<br> Tipo: ".$_FILES['silabus']["type"];      //tipo
+            //echo "<br> Nombre Temporal: ".$_FILES['silabus']["tmp_name"];  //nombre del archivo de la imagen temporal
+            echo "<br> Tamaño: ".$_FILES['silabus']["size"]." bytes";      //tamaño
+            echo "<br> Nombre:".$name;
+        }
+
 ?>
+
 <!-- Regresar al registro -->
 <script language="javascript">
 window.location="../docentes/registrar_silabus.php";
+</script>
+

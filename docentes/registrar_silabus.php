@@ -38,7 +38,7 @@
 <body class="hold-transition sidebar-mini layout-fixed"s>
 <?php include 'layout/header.php';?>
         <section class="content content-wrapper">
-        <form  enctype="multipart/form-data" name="unidades" action="bd/subir_unid.php" method="POST" id="formulario">
+        <form  enctype="multipart/form-data" name="unidades" action="../bd/subir_unid.php" method="POST" id="formulario">
         <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Unidad Didactica</h3>

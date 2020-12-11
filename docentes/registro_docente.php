@@ -32,7 +32,7 @@
     <body class="hold-transition sidebar-mini layout-fixed">
     <?php include 'layout/header.php';?>
     <section class="content-wrapper">    
-        <form name="docente" action="bd/s_docente.php" method="POST" id="formulario">
+        <form name="docente" action="../bd/s_docente.php" method="POST" id="formulario">
         <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Registro de Docentes</h3>
