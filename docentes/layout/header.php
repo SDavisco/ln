@@ -82,6 +82,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="docentes.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Docentes</p>
+                </a>
+              </li>              
+              <li class="nav-item">
                 <a href="silabus.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Silabus</p>

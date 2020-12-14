@@ -3,15 +3,15 @@
     if(!isset($_SESSION["user_name"])) header("Location: login.php");
     require ('../bd/conexion.php');
     //CONSULTAS PARA TRAER DATOS
-    $silabus = "SELECT * FROM alumno";
-    $list_s = $conn->query($silabus);
+    $docente = "SELECT * FROM docente";
+    $list_d = $conn->query($docente);
 ?>  
 <!DOCTYPE html>
 <html>
     <head>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lista de Alumnos</title>
+  <title>Lista de Docentes</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -23,11 +23,11 @@
   <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
-  
-    <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+
+  <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="../plugins/toastr/toastr.min.css">
-  </head> 
+    </head> 
     <body class="hold-transition sidebar-mini>
 <?php include 'layout/header.php';?>
 
@@ -39,45 +39,36 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Alumnos</h3>
+                <h3 class="card-title">Silabus</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Nombres</th>
-                    <th>Correo</th>
-                    <th>Carrera</th>
-                    <th>Sem. Academico</th>
-                    <th>Sem. Lectivo</th>
-                    <th>Turno</th>
+                    <th>DOCENTE</th>
+                    <th>TELEFONO</th>
+                    <th>DNI</th>
                     <th>Acciones</th>
                   </tr>
                   </thead>
                   <tbody>
                     <?php
-                    WHILE($row = $list_s->fetch_assoc()){ 
+                    WHILE($row = $list_d->fetch_assoc()){ 
                     ?>
                   <tr>
-                    <td><?php echo $row ['nombre']." ".$row ['apellido'];?></td>
-                    <td><?php echo $row ['correo'];?></td>
-                    <td><?php echo $row ['carrera'];?></td>
-                    <td><?php echo $row ['semestre_academico'];?></td>
-                    <td><?php echo $row ['semestre_lectivo'];?></td>
-                    <td><?php echo $row ['turno'];?></td>
-                    <td><?php echo "<a href='editar_a.php?id=".$row['id_al']."'>Modificar</a>";?></td>
+                    <td><?php echo $row ['docente'];?></td>
+                    <td><?php echo $row ['telefono'];?></td>
+                    <td><?php echo $row ['dni'];?></td>
+                    <td><?php echo "<a href='../bd/delete_d.php?id=".$row['id_docente']."'>Eliminar</a>";?> <br><?php echo "<a href='editar_d.php?id=".$row['id_docente']."'>Modificar</a>";?></td>
                   </tr>
                   <?php }?>
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Nombres</th>
-                    <th>Correo</th>
-                    <th>Carrera</th>
-                    <th>Sem. Academico</th>
-                    <th>Sem. Lectivo</th>
-                    <th>Turno</th>
+                    <th>DOCENTE</th>
+                    <th>TELEFONO</th>
+                    <th>DNI</th>
                     <th>Acciones</th>
                   </tr>
                   </tfoot>
