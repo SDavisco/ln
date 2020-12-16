@@ -65,43 +65,43 @@
           
               <li class="nav-item">
                 <a href="registro_docente.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-edit nav-icon"></i>
                   <p>Re. docentes</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="registrar_silabus.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-edit nav-icon"></i>
                   <p>Re. silabus</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="registrar_alumno.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-edit nav-icon"></i>
                   <p>Re. alumnos</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="docentes.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-edit nav-icon"></i>
                   <p>Docentes</p>
                 </a>
               </li>              
               <li class="nav-item">
                 <a href="silabus.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-edit nav-icon"></i>
                   <p>Silabus</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="alumnos_l.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-edit nav-icon"></i>
                   <p>Alumnos</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="../logout.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle text-danger nav-icon"></i>
                   <p>Cerrar Sesion</p>
                 </a>
               </li>
