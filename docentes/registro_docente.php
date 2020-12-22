@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -59,36 +60,6 @@
                 </div>           
               </div>
               </div>
-        <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Lista de Docentes</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>Docentes</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                    <?php
-                    WHILE ($row =  $list_d ->fetch_array(MYSQLI_BOTH)){ 
-                    ?>
-                  <tr>
-                    <td><?php echo $row['docente']; ?></td>
-                  </tr>
-                  <?php }?>
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Docentes</th>
-                  </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div> <!
         </form>                    
         </section>
 
