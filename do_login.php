@@ -7,7 +7,7 @@
 		$contra = $_POST["pass"];
 
 		$rs = mysqli_query($conn, "SELECT * FROM acceso  WHERE user_name = '$usuario' AND user_pass = '$contra'");
-		$ra = mysqli_query($conn, "SELECT * FROM alumno  WHERE dni = '$contra' AND correo = '$usuario' ");
+		$ra = mysqli_query($conn, "SELECT * FROM alumno  WHERE correo = '$usuario' AND pass = '$contra' ");
 		if($rs->num_rows>0 ){
 		  $row = mysqli_fetch_array($rs);
 		    if (in_array('1',$row, true)){

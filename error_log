@@ -1,5 +1,0 @@
-[17-Nov-2020 20:08:30 America/Chicago] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'davisco_sistemas'@'localhost' (using password: YES) in /home2/davisco/prueba.davisco.com.pe/bd/conexion.php on line 2
-[17-Nov-2020 20:08:30 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/davisco/prueba.davisco.com.pe/index.php on line 7
-[17-Nov-2020 20:08:43 America/Chicago] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'davisco_sistemas'@'localhost' (using password: YES) in /home2/davisco/prueba.davisco.com.pe/bd/conexion.php on line 2
-[17-Nov-2020 20:08:43 America/Chicago] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home2/davisco/prueba.davisco.com.pe/do_login.php on line 9
-[17-Nov-2020 20:08:43 America/Chicago] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home2/davisco/prueba.davisco.com.pe/do_login.php on line 10

@@ -1,5 +1,0 @@
-		if (empty($row['profile_p'])) {
-    		$image = "assets/media/users/gg.png";
-			} else {
-    		$image = $row['profile_p'];
-			}

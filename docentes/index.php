@@ -24,29 +24,17 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <link rel="stylesheet" href="../dist/css/slider.css">
+  <link rel="stylesheet" href="../dist/css/background.css">
   <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="../plugins/toastr/toastr.min.css">
 </head>    
-    <body class="hold-transition sidebar-mini layout-fixed">
+    <body class="hold-transition sidebar-mini layout-fixed" background="../include/lnv_logo.png">
     <?php include 'layout/header.php';?>
 
-    <div id="slider-wrapper">
-            <div class="inner-wrapper">
-          <input checked type="radio" name="slide" class="control" id="Slide1" />
-        <label for="Slide1" id="s1"></label>
-        <input type="radio" name="slide" class="control" id="Slide2" />
-        <label for="Slide2" id="s2"></label>
-        <input type="radio" name="slide" class="control" id="Slide3" />
-        <label for="Slide3" id="s3"></label>
+    <div>
 
-         <div class="overflow-wrapper">
-      <a class="slide" href=""><img src="../include/1.png" /></a>
-      <a class="slide" href=""><img src="../include/2.jpg" /></a>
-      <a class="slide" href=""><img src="../include/3.jpg" /></a>
     </div>
-  </div>
-</div>
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -64,4 +52,4 @@ $(function () {
 });
 </script>
 </div>
-  </body>
+</body>

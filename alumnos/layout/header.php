@@ -21,7 +21,7 @@
 <body>
 <div >
    <!-- Navbar -->
-  <nav class="navbar navbar-expand navbar-white navbar-light">
+  <nav class="navbar navbar-expand navbar-dark navbar-primary">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
 
@@ -31,8 +31,11 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="ver_silabus.php" class="nav-link">Silabus</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="logout.php" class="nav-link">Cerrar sesion</a>
+      </li>
     </ul>
-    <span style="float:right" class="item" id="nombre_usuario"><a href="logout.php">Cerrar sesion</a></span>
+    
 
   </nav>
   <!-- /.navbar -->

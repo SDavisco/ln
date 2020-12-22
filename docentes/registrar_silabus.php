@@ -98,7 +98,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleSelectRounded0">Semestre</label>
+                    <label for="exampleSelectRounded0">Especialidad</label>
                         <div class="custom-control custom-checkbox">
                           <input class="custom-control-input" type="checkbox" id="customCheckbox1" name="checkbox[]" value="COMPUTACION">
                           <label for="customCheckbox1" class="custom-control-label">Computacion e Informatica</label>
