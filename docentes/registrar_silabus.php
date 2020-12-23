@@ -49,7 +49,7 @@
                 <h4>Datos de Unidad Didactica</h4>
                 <div class="form-group">
                   <label for="exampleSelectBorder">Unidad Didactica</label>
-                  <select class="custom-select form-control-border" id="unidad" name="unidad">
+                  <select class="custom-select form-control-border" id="unidad" name="unidad"  required>
                     <option value="0">nombre de la unidad</option>
                     <?php WHILE($row1 = $list_u->fetch_assoc()){?>
                     <option value="<?php echo $row1['nomb_unidad'];?>"><?php echo $row1['nomb_unidad'];?>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleSelectBorderWidth2">Docente</label>
-                  <select class="custom-select form-control-border border-width-2" id="docente" name="docente">
+                  <select class="custom-select form-control-border border-width-2" id="docente" name="docente"  required>
                     <option value="0">nombre del docente</option>
                     <?php WHILE($row2 = $list_d->fetch_assoc()){?>
                     <option value="<?php echo $row2['docente'];?>"><?php echo $row2['docente'];?>
@@ -69,8 +69,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Ciclo</label>
-                  <select class="custom-select rounded-0" id="sem_ac" name="sem_ac">
-                    <option value="0">semestre academico</option>
+                  <select class="custom-select rounded-0" id="sem_ac" name="sem_ac"  required>
                     <?php WHILE($row3 = $list_sa->fetch_assoc()){?>
                     <option value="<?php echo $row3['semestre'];?>"><?php echo $row3['semestre'];?>
                     </option>
@@ -79,8 +78,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Semestre</label>
-                  <select class="custom-select rounded-0" id="semestre" name="sem_lectivo">
-                    <option value="0">semestre lectivo</option>
+                  <select class="custom-select rounded-0" id="semestre" name="sem_lectivo" >
                     <?php WHILE($row4 = $list_sl->fetch_assoc()){?>
                     <option value="<?php echo $row4['sem_lectivo'];?>"><?php echo $row4['sem_lectivo'];?>
                     </option>
@@ -90,7 +88,6 @@
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Turno</label>
                     <select class="custom-select rounded-0" id="turno" name="turno">
-                    <option value="0">turno</option>
                     <?php WHILE($row5 = $list_t->fetch_assoc()){?>
                     <option value="<?php echo $row5['turno'];?>"><?php echo $row5['turno'];?>
                     </option>

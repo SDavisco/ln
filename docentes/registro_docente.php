@@ -44,15 +44,15 @@
                 <h4>Datos del Docente</h4>    
                 <div class="form-group">
                   <label for="exampleInputBorder">Nombre de Docente</label>
-                  <input type="text" class="form-control form-control-border" name="docente" id="docente" placeholder="Nombres">
+                  <input type="text" class="form-control form-control-border" name="docente" id="docente" placeholder="Nombres"  required>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputBorder">Teléfono</label>
-                  <input type="text" class="form-control form-control-border" name="telefono" id="telefono" placeholder="Número de telefono">
+                  <input type="text" class="form-control form-control-border" name="telefono" id="telefono" placeholder="Número de telefono"  required>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email"  required>
                 </div>
 <!-- /.card-body -->
               <div class="card-footer">

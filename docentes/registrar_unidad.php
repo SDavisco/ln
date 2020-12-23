@@ -45,7 +45,7 @@
                 <h4>Datos de Unidad Didactica</h4>
                 <div class="form-group">
                   <label for="exampleSelectBorder">Unidad Didactica</label>
-                  <select class="custom-select form-control-border" id="unidad" name="unidad">
+                  <select class="custom-select form-control-border" id="unidad" name="unidad" >
                     <option value="0">nombre de la unidad</option>
                     <?php WHILE($row1 = $list_u->fetch_assoc()){?>
                     <option value="<?php echo $row1['nomb_unidad'];?>"><?php echo $row1['nomb_unidad'];?>

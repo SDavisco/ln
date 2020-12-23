@@ -47,24 +47,23 @@
                 <h4>Datos del Alumno</h4>
                 <div class="form-group">
                   <label for="exampleInputBorder">Nombres</label>
-                  <input type="text" class="form-control form-control-border" name="nombres" id="nombres" placeholder="Nombres">
+                  <input type="text" class="form-control form-control-border" name="nombres" id="nombres" placeholder="Nombres" required>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputBorder">Apellidos</label>
-                  <input type="text" class="form-control form-control-border" name="apellidos" id="apellidos" placeholder="Apellidos">
+                  <input type="text" class="form-control form-control-border" name="apellidos" id="apellidos" placeholder="Apellidos" required>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputBorder">D.N.I</label>
-                  <input type="text" class="form-control form-control-border" name="dni" id="dni" placeholder="DNI">
+                  <input type="text" class="form-control form-control-border" name="dni" id="dni" placeholder="DNI" required>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
                 </div>
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Carrera</label>
-                    <select class="custom-select rounded-0" name="carrera">
-                        <option value="0">CARRERA</option>
+                    <select class="custom-select rounded-0"  placrequired>
                         <?php WHILE($row = $list_c->fetch_assoc()){?>
                     <option value="<?php echo $row['nomb_carrera'];?>"><?php echo $row['nomb_carrera'];?>
                        </option>
@@ -74,7 +73,6 @@
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Semestre Academico</label>
                   <select class="custom-select rounded-0" id="semestre" name="semestre">
-                    <option value="0">semestre academico </option>
                     <?php WHILE($row4 = $list_sa->fetch_assoc()){?>
                     <option value="<?php echo $row4['semestre'];?>"><?php echo $row4['semestre'];?>
                     </option>
@@ -84,7 +82,7 @@
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Semestre</label>
                   <select class="custom-select rounded-0" id="semestre" name="sem_lectivo">
-                    <option value="0">semestre lectivo</option>
+
                     <?php WHILE($row4 = $list_sl->fetch_assoc()){?>
                     <option value="<?php echo $row4['sem_lectivo'];?>"><?php echo $row4['sem_lectivo'];?>
                     </option>
@@ -94,7 +92,6 @@
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Turno</label>
                     <select class="custom-select rounded-0" id="turno" name="turno">
-                    <option value="0">turno</option>
                     <?php WHILE($row5 = $list_t->fetch_assoc()){?>
                     <option value="<?php echo $row5['turno'];?>"><?php echo $row5['turno'];?>
                     </option>
