@@ -9,6 +9,9 @@
 <html>
 <head>
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- jQuery -->
+      <script src="../plugins/jquery/jquery.min.js"></script>
+      <script src="../dist/js/slider.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
@@ -22,9 +25,17 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../dist/css/slider.css">
-    <link rel="stylesheet" href="../dist/css/background.css">
+
 </head>    
     <body class="hold-transition sidebar-mini layout-fixed">
     <?php include 'layout/header.php';?>
-    
+    <header class="cont-slider">
+    <section class="slider">
+      <article class="slide uno"><span>Mira </span></article><!--
+      --><article class="slide dos"><span>Como </span></article><!--
+      --><article class="slide tres"><span>Funciona</span></article><!--
+      --><article class="slide cuatro"><span>Este</span></article><!--
+      --><article class="slide cinco"><span>Slider</span></article>
+    </section>
+</header>
 </body>

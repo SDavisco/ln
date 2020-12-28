@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+  <link rel="stylesheet" href="dist/css/background_login.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -44,7 +46,7 @@
         <div class="row">
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
           </div>
           <!-- /.col -->
         </div>
