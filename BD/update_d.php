@@ -1,3 +1,4 @@
+actualizar datos de docente
 <?php
     require_once('conexion.php');
     $id=$_POST['id_al'];

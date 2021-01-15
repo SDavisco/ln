@@ -10,15 +10,15 @@
 		$ra = mysqli_query($conn, "SELECT * FROM alumno  WHERE correo = '$usuario' AND pass = '$contra' ");
 		if($rs->num_rows>0 ){
 		  $row = mysqli_fetch_array($rs);
-		    if (in_array('1',$row, true)){
+		    if ($row[1]= 1){
 			@session_start();
 				$_SESSION["user_name"]=$row["user_name"];
 				header("Location: docentes/index.php");
 		   	}
 		}
-		if($ra->num_rows>0 ){
+		elseif ($ra->num_rows>0) {
 			$col = mysqli_fetch_array($ra);
-			if (in_array('2',$col, true)){
+			if ($col[1]= 2){
 				@session_start();
 					$_SESSION["user_name"]=$col["nombre"]." ".	$col["apellido"];
 					$_SESSION["user_correo"]=$col["correo"];
@@ -35,6 +35,6 @@
 		}
 		
 	}else{
-		echo "Llene el formulario gg";
+		echo "Llene el formulario ";
 	}
 ?>
